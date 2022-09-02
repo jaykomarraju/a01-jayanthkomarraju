@@ -7,6 +7,8 @@ var fs = require('fs');
 // Require minimist module (make sure you install this one via npm).
 var argv = require('minimist')(process.argv.slice(2));
 
+console.log(argv.port);
+
 
 // Use minimist to process one argument `--port=` on the command line after `node server.js`.
 
@@ -30,10 +32,12 @@ fs.readFile('./public/index.html', (err,data) => {
     else{
         console.log("hi")
         const server = http.createServer((req,res) => {
+            
             res.writeHead(200, { 'Content-Type': 'text/html' })
             res.end(data)
-        }).listen(7001, () => {
-            console.log('Server started at 7001');
+            
+        }).listen(argv.port || 3000, () => {
+            console.log(`Server started at ${argv.port || 3000}`);
            });
         // const server = http.createServer((req,res) => {
         //     res.statusCode(200)
