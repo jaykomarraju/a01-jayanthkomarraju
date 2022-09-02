@@ -1,0 +1,32 @@
+{
+  "name": "ls",
+  "version": "0.0.1",
+  "description": "This package contains a very simple web server that takes one argument for port and then serves any files inside the public directory.",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js --port=5555",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "web",
+    "server",
+    "port",
+    "node",
+    "fs",
+    "args",
+    "http"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-fall/a01-jayanthkomarraju.git"
+  },
+  "author": "jayanthkomarraju",
+  "license": "LICENSE",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-fall/a01-jayanthkomarraju/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-fall/a01-jayanthkomarraju#readme",
+  "dependencies": {
+    "minimist": "^1.2.6"
+  }
+}
